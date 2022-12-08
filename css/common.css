@@ -1,0 +1,68 @@
+body {
+    /*---Значення за замовченням---*/
+    font-family: "Lato", sans-serif;
+    color: #424551;
+    /* font-size: 14px; а коли font-size 16px - то не потрібно вказувати*/
+}
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   
+}
+.wrapper> main {
+    flex-grow: 1; 
+}
+
+
+/*----Кнопка з градієнтом---*/
+.button {
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    padding: 16px 40px;
+}
+
+/*---Анімація кнопки---*/
+.button span {
+    position: relative;
+    z-index: 2;
+}
+.button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(55.95deg, #e43933 0%, #e35605 100%);
+    border-radius: 4px;
+    opacity: 0;
+}
+.button:hover::before {
+    opacity: 1;
+}
+
+/*---Кнопка прозора з границею---*/
+.button--border {
+    background: transparent;
+    border: 1px solid #FF3F3A;
+    transition: all 0.3s ease 0s;
+    color: #FF3F3A;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    padding: 15px 40px;
+    position: relative;
+}
+.button--border:hover {
+    background-color: #FF3F3A;
+    border: 1px solid #FF3F3A;
+    color:#fff;
+}
